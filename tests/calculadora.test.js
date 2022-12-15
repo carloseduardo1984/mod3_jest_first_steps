@@ -1,9 +1,21 @@
 const { sum, diff, product, divi } = require('./../src/calculadora');
 const calculadora = require('./../src/calculadora')
 
-test('A soma de 1 e 2 deve ser igual a 3', () => {
+test('A soma de 1 e 2 deve ser igual a 3 por classe calculadora', () => {
 
-    //expect(sum(1, 2)).toBe(3);
+    expect(calculadora.sum(1, 2)).toBe(3);
+        
+});
+
+test('A soma de 1 e 2 deve ser igual a 3 por função', () => {
+
+    expect(sum(1, 2)).toBe(3);
+
+    
+});
+
+test('A soma de 1 e 2 não deve ser igual a 5 por função', () => {
+
     expect(sum(1, 2)).not.toBe(5);
 });
 
